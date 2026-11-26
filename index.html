@@ -329,6 +329,67 @@ footer a{color:var(--gold)}
  .result-grid{grid-template-columns:repeat(2,1fr)}
  h1{letter-spacing:-1px}
 }
+  
+/* PROFESSIONAL SKILLS — 3D BOARD DESIGN */
+
+#skills .skill-board {
+  background: #FFFFFF;
+  color: #1B2433;
+  padding: 25px;
+  border: 1px solid #D5DFEA;
+  border-radius: 16px;
+  box-shadow:
+    0 5px 0 #CBD5E1,
+    0 12px 25px rgba(4, 23, 39, 0.12);
+  margin-bottom: 25px;
+}
+
+#skills .skill-board-title {
+  padding: 16px 20px;
+  margin: -5px 0 22px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.18);
+}
+
+#skills .advanced-board .skill-board-title {
+  background: #071A3A;
+  color: #F5B335;
+  border-left: 6px solid #F28C28;
+}
+
+#skills .intermediate-board .skill-board-title {
+  background: #0B4770;
+  color: #FFFFFF;
+  border-left: 6px solid #F5B335;
+}
+
+#skills .skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#skills .skill-list li {
+  background: #E8EEF6;
+  color: #1B2433;
+  padding: 11px 14px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border-left: 4px solid #F28C28;
+  box-shadow: 0 3px 0 #D1DAE5;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#skills .skill-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(4, 23, 39, 0.12);
+}
 </style>
 </head>
 
@@ -1000,9 +1061,9 @@ footer a{color:var(--gold)}
   <p class="eyebrow">Skills & Capabilities</p>
   <h2>Professional <span class="accent">Skills</span></h2>
   <div class="grid-2">
-   <div class="skill-column" style="color:#1B2433;background:#FFFFFF;">
-     <h3 style="color:#071A3A;">Advanced Skills</h3>
-      <ul style="color:#1B2433;">
+   <div class="skill-column skill-board advanced-board">
+     <h3 class="skill-board-title">ADVANCED SKILLS</h3>
+      <ul class="skill-list">
         <li>SEO & Website Optimization</li>
         <li>Google Ads Campaign Management</li>
         <li>Microsoft Advertising (Bing Ads)</li>
@@ -1017,8 +1078,9 @@ footer a{color:var(--gold)}
       </ul>
     </div>
     <div class="skill-column" style="color:#1B2433;background:#FFFFFF;">
-      <h3 style="color:#071A3A;">Intermediate Skills</h3>
-      <ul style="color:#1B2433;">
+      <div class="skill-column skill-board intermediate-board">
+        <h3 class="skill-board-title">INTERMEDIATE SKILLS</h3>
+      <ul class="skill-list">
         <li>Microsoft Excel & Google Sheets</li>
         <li>Google Workspace</li>
         <li>Asana & ClickUp</li>
