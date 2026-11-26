@@ -109,13 +109,169 @@ nav{min-height:76px;display:flex;align-items:center;justify-content:space-betwee
 .timeline-item li{margin-bottom:6px}
 
 /* Portfolio evidence */
-.evidence-card{overflow:hidden}
-.evidence-visual{min-height:185px;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;background:linear-gradient(135deg,#0B2447,#142F52);border:1px dashed rgba(255,255,255,.3);border-radius:6px;color:#D5E0EE}
-.evidence-visual span{display:block;color:var(--gold);font:700 .8rem Montserrat;margin-bottom:7px}
-.evidence-card h3{margin:18px 0 8px}
-.evidence-card p{font-size:.84rem;color:var(--muted)}
-.evidence-card a{color:var(--gold);font-size:.82rem;font-weight:700}
-.evidence-card a:hover{color:var(--orange)}
+/* Portfolio evidence gallery */
+.evidence-card {
+  overflow: hidden;
+  padding: 0;
+}
+
+.evidence-image-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: #0B2447;
+  cursor: zoom-in;
+  overflow: hidden;
+}
+
+.evidence-image-button img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform .25s ease;
+}
+
+.evidence-image-button:hover img {
+  transform: scale(1.035);
+}
+
+.evidence-card-content {
+  padding: 20px;
+}
+
+.evidence-card h3 {
+  margin: 0 0 8px;
+  color: inherit;
+}
+
+.evidence-card p {
+  font-size: .84rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.light-section .evidence-card p {
+  color: #596579;
+}
+
+.proof-category {
+  margin-top: 42px;
+}
+
+.proof-category:first-of-type {
+  margin-top: 0;
+}
+
+.proof-category h3 {
+  margin-bottom: 8px;
+}
+
+.proof-category-intro {
+  color: var(--muted);
+  font-size: .88rem;
+  margin-bottom: 20px;
+}
+
+.light-section .proof-category-intro {
+  color: #596579;
+}
+
+/* Image enlargement viewer */
+#proofLightbox {
+  width: min(94vw, 1100px);
+  max-width: none;
+  max-height: 92vh;
+  margin: auto;
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 10px;
+  background: #041727;
+  color: white;
+}
+
+#proofLightbox::backdrop {
+  background: rgba(0,0,0,.88);
+}
+
+#proofLightbox img {
+  display: block;
+  max-width: 100%;
+  max-height: 78vh;
+  width: auto;
+  height: auto;
+  margin: auto;
+  object-fit: contain;
+}
+
+.lightbox-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 5px 4px 12px;
+}
+
+.lightbox-header strong {
+  font-family: Montserrat, sans-serif;
+  font-size: .9rem;
+}
+
+.lightbox-close {
+  border: 1px solid rgba(255,255,255,.3);
+  background: transparent;
+  color: white;
+  border-radius: 5px;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+/* Featured English credential */
+.credential-featured {
+  border: 2px solid var(--orange);
+  background: linear-gradient(135deg, rgba(242,140,40,.13), rgba(255,255,255,.04));
+  grid-column: 1 / -1;
+}
+
+.credential-featured .featured-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 9px;
+  border-radius: 4px;
+  background: var(--orange);
+  color: var(--azure);
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.credential-certificate-image {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  object-position: left center;
+  margin: 15px 0;
+  background: rgba(0,0,0,.12);
+  border-radius: 6px;
+}
+
+@media(max-width:620px) {
+  .evidence-image-button img {
+    height: 200px;
+  }
+
+  .credential-featured {
+    grid-column: auto;
+  }
+}
 
 /* Case study */
 .case-study{border:1px solid var(--border);border-radius:10px;padding:30px;background:rgba(255,255,255,.035)}
@@ -386,68 +542,232 @@ footer a{color:var(--gold)}
 </section>
 
 <!-- PORTFOLIO -->
+<!-- PORTFOLIO -->
 <section class="light-section" id="portfolio">
 <div class="container">
   <p class="eyebrow">Selected Work & Evidence</p>
   <h2>Portfolio & <span class="accent">Work Samples</span></h2>
-  <p class="section-intro">Selected marketing deliverables, campaign reporting, landing pages, and SEO evidence. Additional screenshots and lead magnets will be added as they are prepared.</p>
+  <p class="section-intro">
+    A collection of practical work samples covering SEO, paid advertising,
+    e-commerce, CRM, lead generation, content planning, and business operations.
+    Select any image to enlarge it.
+  </p>
 
-  <div class="grid-2">
+  <!-- CATEGORY 1: SEO AND PERFORMANCE MARKETING -->
+  <div class="proof-category">
+    <h3>01. SEO, Performance Marketing & Analytics</h3>
+    <p class="proof-category-intro">Search visibility, website performance, analytics, and paid advertising evidence.</p>
+    <div class="grid-3">
 
-    <article class="card evidence-card">
-      <div class="evidence-visual"><div><span>SEO PERFORMANCE</span>Google Search Console & Organic Search Evidence<br><small>Dashboard screenshot to be added</small></div></div>
-      <h3>SEO & Organic Search Performance</h3>
-      <p>Search visibility, clicks, impressions, CTR, average position, organic traffic, and conversion reporting.</p>
-      <a href="#seo-results">View SEO results ↓</a>
-    </article>
+      <article class="card evidence-card">
+        <button class="evidence-image-button" type="button" data-full="assets/proofs/GOOGLE%20SEARCH%20CONSOLE.png" data-title="Google Search Console">
+          <img src="assets/proofs/GOOGLE%20SEARCH%20CONSOLE.png" alt="Google Search Console work sample" loading="lazy">
+        </button>
+        <div class="evidence-card-content">
+          <h3>Google Search Console</h3>
+          <p>Search performance monitoring, organic clicks, impressions, CTR, and average position.</p>
+        </div>
+      </article>
 
-    <article class="card evidence-card">
-      <div class="evidence-visual"><div><span>LOOKER STUDIO</span>Marketing Performance Dashboard<br><small>Dashboard screenshot to be added</small></div></div>
-      <h3>Looker Studio Reporting</h3>
-      <p>Marketing dashboards developed to monitor business performance and support ongoing reporting.</p>
-      <a href="#seo-results">View reporting metrics ↓</a>
-    </article>
+      <article class="card evidence-card">
+        <button class="evidence-image-button" type="button" data-full="assets/proofs/SEO%20Performance.png" data-title="SEO Performance">
+          <img src="assets/proofs/SEO%20Performance.png" alt="SEO performance work sample" loading="lazy">
+        </button>
+        <div class="evidence-card-content">
+          <h3>SEO Performance</h3>
+          <p>SEO reporting and performance analysis supporting organic search optimization.</p>
+        </div>
+      </article>
 
-    <article class="card evidence-card">
-      <div class="evidence-visual"><div><span>GOOGLE ADS & PPC</span>Campaign Structure & Performance<br><small>Campaign screenshots to be added</small></div></div>
-      <h3>Paid Advertising Campaigns</h3>
-      <p>Campaign setup, keyword research, competitor analysis, budget management, bidding, search-term analysis, and optimization.</p>
-      <a href="#paid-results">View campaign results ↓</a>
-    </article>
+      <article class="card evidence-card">
+        <button class="evidence-image-button" type="button" data-full="assets/proofs/GA4%20analytics.png" data-title="Google Analytics 4">
+          <img src="assets/proofs/GA4%20analytics.png" alt="Google Analytics 4 work sample" loading="lazy">
+        </button>
+        <div class="evidence-card-content">
+          <h3>Google Analytics 4</h3>
+          <p>Website traffic, user behavior, sessions, and conversion measurement.</p>
+        </div>
+      </article>
 
-    <article class="card evidence-card">
-      <div class="evidence-visual"><div><span>GOHIGHLEVEL</span>Landing Page Development<br><small>Live sample links below</small></div></div>
-      <h3>Landing Pages & Lead Generation</h3>
-      <p>Sample landing pages built using GoHighLevel / LeadConnector.</p>
-      <a href="https://sites.leadconnectorhq.com/preview/iLmygHKXAaZwS3NHwWQv?notrack=true" target="_blank" rel="noopener">View Landing Page 01 ↗</a><br>
-      <a href="https://sites.leadconnectorhq.com/preview/Z93RT2A52FNoAw6d2VcS?notrack=true" target="_blank" rel="noopener">View Landing Page 02 ↗</a>
-    </article>
+      <article class="card evidence-card">
+        <button class="evidence-image-button" type="button" data-full="assets/proofs/Google%20Ads.png" data-title="Google Ads">
+          <img src="assets/proofs/Google%20Ads.png" alt="Google Ads campaign work sample" loading="lazy">
+        </button>
+        <div class="evidence-card-content">
+          <h3>Google Ads</h3>
+          <p>Paid search campaign management, performance monitoring, and optimization.</p>
+        </div>
+      </article>
 
-    <article class="card evidence-card">
-      <div class="evidence-visual"><div><span>SEO RESEARCH</span>Keyword Research & Technical SEO<br><small>Audit examples to be added</small></div></div>
-      <h3>SEO Research & Website Optimization</h3>
-      <p>Keyword research, website metadata review, technical SEO checks, and search performance analysis.</p>
-    </article>
-
-    <article class="card evidence-card">
-      <div class="evidence-visual"><div><span>SOCIAL MEDIA</span>Content & Social Media Management<br><small>Content examples to be added</small></div></div>
-      <h3>Social Media & Content</h3>
-      <p>Social media planning, content creation, publishing, audience engagement, and inbound response management.</p>
-    </article>
-
-    <article class="card evidence-card">
-      <div class="evidence-visual"><div><span>CRM & OPERATIONS</span>Contact and Opportunity Tracking<br><small>Workflow samples to be added</small></div></div>
-      <h3>CRM & Business Operations</h3>
-      <p>Contact organization, deal stages, task tracking, notes, follow-ups, and operational documentation.</p>
-    </article>
-
-    <article class="card evidence-card">
-      <div class="evidence-visual"><div><span>LEAD MAGNETS</span>Lead Generation Assets<br><small>To be added later</small></div></div>
-      <h3>Lead Magnets & Funnels</h3>
-      <p>Lead magnet designs and additional funnel samples will be added to this section later.</p>
-    </article>
-
+    </div>
   </div>
+
+  <!-- CATEGORY 2: E-COMMERCE -->
+  <div class="proof-category">
+    <h3>02. E-commerce & Marketplace Operations</h3>
+    <p class="proof-category-intro">Product catalog management, marketplace operations, and e-commerce reporting.</p>
+    <div class="grid-3">
+
+      <article class="card evidence-card">
+        <button class="evidence-image-button" type="button" data-full="assets/proofs/Google%20Merchant%20Center.png" data-title="Google Merchant Center">
+          <img src="assets/proofs/Google%20Merchant%20Center.png" alt="Google Merchant Center work sample" loading="lazy">
+        </button>
+        <div class="evidence-card-content">
+          <h3>Google Merchant Center</h3>
+          <p>Product feed and Merchant Center operations for e-commerce listings.</p>
+        </div>
+      </article>
+
+      <article class="card evidence-card">
+        <button class="evidence-image-button" type="button" data-full="assets/proofs/Shopify%20Catalog%20Analytics%20for%20The%20mirrored%20store%20from%20the%20website.png" data-title="Shopify Catalog Analytics">
+          <img src="assets/proofs/Shopify%20Catalog%20Analytics%20for%20The%20mirrored%20store%20from%20the%20website.png" alt="Shopify catalog analytics work sample" loading="lazy">
+        </button>
+        <div class="evidence-card-content">
+          <h3>Shopify Catalog Analytics</h3>
+          <p>Product catalog and store analytics support.</p>
+        </div>
+      </article>
+
+      <article class="card evidence-card">
+        <button class="evidence-image-button" type="button" data-full="assets/proofs/Amazon%20Sales%20Dashboard.png" data-title="Amazon Sales Dashboard">
+          <img src="assets/proofs/Amazon%20Sales%20Dashboard.png" alt="Amazon sales dashboard work sample" loading="lazy">
+        </button>
+        <div class="evidence-card-content">
+          <h3>Amazon Sales Dashboard</h3>
+          <p>Marketplace sales reporting and performance monitoring.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- CATEGORY 3: CRM AND LEAD GENERATION -->
+  <div class="proof-category">
+    <h3>03. CRM, Lead Generation & Management</h3>
+    <p class="proof-category-intro">Examples of contact organization, pipeline tracking, lead management, and CRM workflows.</p>
+    <div class="grid-3">
+
+      <article class="card evidence-card">
+        <button class="evidence-image-button" type="button" data-full="assets/proofs/NOTION%20CRM%20Sample%20View.png" data-title="Notion CRM">
+          <img src="assets/proofs/NOTION%20CRM%20Sample%20View.png" alt="Notion CRM sample view" loading="lazy">
+        </button>
+        <div class="evidence-card-content">
+          <h3>Notion CRM</h3>
+          <p>Structured contact and relationship tracking using Notion.</p>
+        </div>
+      </article>
+
+      <article class="card evidence-card">
+        <button class="evidence-image-button" type="button" data-full="assets/proofs/Google%20Sheet%20Sample%20CRM%20dashboard.png" data-title="Google Sheets CRM Dashboard">
+          <img src="assets/proofs/Google%20Sheet%20Sample%20CRM%20dashboard.png" alt="Google Sheets CRM dashboard sample" loading="lazy">
+        </button>
+        <div class="evidence-card-content">
+          <h3>Google Sheets CRM Dashboard</h3>
+          <p>Spreadsheet-based CRM tracking and organized lead records.</p>
+        </div>
+      </article>
+
+      <article class="card evidence-card">
+        <button class="evidence-image-button" type="button" data-full="assets/proofs/Hubspot%20CRM%20final.png" data-title="HubSpot CRM">
+          <img src="assets/proofs/Hubspot%20CRM%20final.png" alt="HubSpot CRM work sample" loading="lazy">
+        </button>
+        <div class="evidence-card-content">
+          <h3>HubSpot CRM</h3>
+          <p>Contact management, opportunities, deal stages, and follow-up tracking.</p>
+        </div>
+      </article>
+
+      <article class="card evidence-card">
+        <button class="evidence-image-button" type="button" data-full="assets/proofs/Podio%20CRM.png" data-title="Podio CRM">
+          <img src="assets/proofs/Podio%20CRM.png" alt="Podio CRM work sample" loading="lazy">
+        </button>
+        <div class="evidence-card-content">
+          <h3>Podio CRM</h3>
+          <p>CRM workspace and structured business information management.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- CATEGORY 4: CONTENT AND MARKETING OPERATIONS -->
+  <div class="proof-category">
+    <h3>04. Content Planning & Marketing Operations</h3>
+    <p class="proof-category-intro">Content planning and lead-generation creative examples.</p>
+    <div class="grid-3">
+
+      <article class="card evidence-card">
+        <button class="evidence-image-button" type="button" data-full="assets/proofs/Content%20Planning%20Overview.png" data-title="Content Planning Overview">
+          <img src="assets/proofs/Content%20Planning%20Overview.png" alt="Content planning overview" loading="lazy">
+        </button>
+        <div class="evidence-card-content">
+          <h3>Content Planning Overview</h3>
+          <p>Content organization, planning, and marketing workflow management.</p>
+        </div>
+      </article>
+
+      <article class="card evidence-card">
+        <button class="evidence-image-button" type="button" data-full="assets/proofs/Lead%20magnet%20creative%2001.png" data-title="Lead Magnet Creative">
+          <img src="assets/proofs/Lead%20magnet%20creative%2001.png" alt="Lead magnet creative sample" loading="lazy">
+        </button>
+        <div class="evidence-card-content">
+          <h3>Lead Magnet Creative</h3>
+          <p>Creative asset developed to support lead generation and audience engagement.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- CATEGORY 5: BUSINESS OPERATIONS -->
+  <div class="proof-category">
+    <h3>05. Business Operations & Productivity Systems</h3>
+    <p class="proof-category-intro">Personal productivity, task management, email organization, and operational systems.</p>
+    <div class="grid-3">
+
+      <article class="card evidence-card">
+        <button class="evidence-image-button" type="button" data-full="assets/proofs/Personal%20Achievement%20Tracker.png" data-title="Personal Achievement Tracker">
+          <img src="assets/proofs/Personal%20Achievement%20Tracker.png" alt="Personal achievement tracker" loading="lazy">
+        </button>
+        <div class="evidence-card-content">
+          <h3>Personal Achievement Tracker</h3>
+          <p>Personal goal tracking and progress organization system.</p>
+        </div>
+      </article>
+
+      <article class="card evidence-card">
+        <button class="evidence-image-button" type="button" data-full="assets/proofs/PERSONAL%20COMMAND%20CENTER%20DASHBOARD.png" data-title="Personal Command Center Dashboard">
+          <img src="assets/proofs/PERSONAL%20COMMAND%20CENTER%20DASHBOARD.png" alt="Personal command center dashboard" loading="lazy">
+        </button>
+        <div class="evidence-card-content">
+          <h3>Personal Command Center Dashboard</h3>
+          <p>Centralized personal workflow and productivity dashboard.</p>
+        </div>
+      </article>
+
+      <article class="card evidence-card">
+        <button class="evidence-image-button" type="button" data-full="assets/proofs/Email%20management.png" data-title="Email Management">
+          <img src="assets/proofs/Email%20management.png" alt="Email management work sample" loading="lazy">
+        </button>
+        <div class="evidence-card-content">
+          <h3>Email Management</h3>
+          <p>Email organization and inbox management workflow.</p>
+        </div>
+      </article>
+
+      <article class="card evidence-card">
+        <button class="evidence-image-button" type="button" data-full="assets/proofs/TASK%20management.png" data-title="Task Management">
+          <img src="assets/proofs/TASK%20management.png" alt="Task management work sample" loading="lazy">
+        </button>
+        <div class="evidence-card-content">
+          <h3>Task Management</h3>
+          <p>Task organization and project tracking using ClickUp.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
 </div>
 </section>
 
@@ -764,12 +1084,33 @@ footer a{color:var(--gold)}
       <p>Google Tag Manager Fundamentals certification.</p>
     </div>
     <div class="credential-card">
-      <h3>EF SET English Certificate</h3>
-      <p>67/100 · C1 Advanced</p>
-      <p>Reading: 71 — C2 Proficient<br>Listening: 63 — C1 Advanced<br>Awarded: 16 November 2024</p>
-      <a class="credential-link" href="https://cert.efset.org/xztfKu" target="_blank" rel="noopener">Verify EF SET Certificate ↗</a>
-    </div>
-    <div class="credential-card">
+  <h3>EF SET English Certificate — C1 Advanced</h3>
+  <p><strong>Overall Score: 67/100 · C1 Advanced</strong></p>
+  <p>
+    Reading: 71 — C2 Proficient<br>
+    Listening: 63 — C1 Advanced<br>
+    Awarded: 16 November 2024
+  </p>
+
+  <img
+    class="credential-certificate-image"
+    src="assets/proofs/Clen%20Thon%20Guzarem%20-%20C1%20ADVANCED.png"
+    alt="Clen Thon Guzarem EF SET C1 Advanced English Certificate"
+    loading="lazy"
+  >
+
+  <p>
+    Demonstrates advanced English reading and listening proficiency,
+    with an overall C1 Advanced result under the CEFR scale.
+  </p>
+
+  <a class="credential-link"
+     href="https://cert.efset.org/xztfKu"
+     target="_blank"
+     rel="noopener">
+    Verify EF SET Certificate ↗
+  </a>
+</div>
       <h3>Peak Outsourcing — Certificate of Achievements</h3>
       <p>Records Retrieval Specialist · Peak Outsourcing, Dumaguete City · 2024</p>
     </div>
@@ -875,9 +1216,49 @@ footer a{color:var(--gold)}
   <p>Built to showcase professional experience, capabilities, and selected work.</p>
 </div>
 </footer>
+  <dialog id="proofLightbox" aria-label="Enlarged portfolio image">
+  <div class="lightbox-header">
+    <strong id="proofLightboxTitle">Portfolio image</strong>
+    <button class="lightbox-close" type="button" id="proofLightboxClose">
+      Close ✕
+    </button>
+  </div>
+  <img id="proofLightboxImage" src="" alt="">
+</dialog>
 
 <script>
+<script>
 document.getElementById("year").textContent = new Date().getFullYear();
+
+const lightbox = document.getElementById("proofLightbox");
+const lightboxImage = document.getElementById("proofLightboxImage");
+const lightboxTitle = document.getElementById("proofLightboxTitle");
+const closeButton = document.getElementById("proofLightboxClose");
+
+document.querySelectorAll(".evidence-image-button").forEach(button => {
+  button.addEventListener("click", () => {
+    const imagePath = button.dataset.full;
+    const imageTitle = button.dataset.title;
+
+    lightboxImage.src = imagePath;
+    lightboxImage.alt = imageTitle;
+    lightboxTitle.textContent = imageTitle;
+
+    lightbox.showModal();
+  });
+});
+
+closeButton.addEventListener("click", () => {
+  lightbox.close();
+});
+
+lightbox.addEventListener("click", event => {
+  if (event.target === lightbox) {
+    lightbox.close();
+  }
+});
+
+lightbox.addEventListener("close", () => {
+  lightboxImage.src = "";
+});
 </script>
-</body>
-</html>
