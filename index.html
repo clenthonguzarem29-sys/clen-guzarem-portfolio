@@ -2,856 +2,882 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Clen Guzarem — Digital Marketing VA specializing in social media, paid advertising, SEO, analytics, and marketing operations.">
-  <meta name="theme-color" content="#041727">
-  <title>Clen Guzarem | Digital Marketing VA</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --azure: #041727;
-      --navy: #071A3A;
-      --orange: #F28C28;
-      --gold: #F5B335;
-      --white: #FFFFFF;
-      --light: #E8EEF6;
-      --charcoal: #1B2433;
-      --muted: #AAB8C9;
-      --border: rgba(255,255,255,.12);
-      --max-width: 1120px;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--azure);
-      color: var(--white);
-      line-height: 1.7;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .container {
-      width: min(90%, var(--max-width));
-      margin: auto;
-    }
-
-    .eyebrow {
-      color: var(--orange);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: .75rem;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-
-    h1, h2, h3, .logo {
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    h2 {
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-
-    .section-intro {
-      color: var(--muted);
-      max-width: 650px;
-      margin-bottom: 42px;
-    }
-
-    .accent { color: var(--orange); }
-
-    /* Navigation */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(4,23,39,.94);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    nav {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .logo {
-      font-size: 1.05rem;
-      font-weight: 800;
-      letter-spacing: .5px;
-    }
-
-    .logo span { color: var(--orange); }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      list-style: none;
-      font-size: .86rem;
-      color: var(--light);
-    }
-
-    .nav-links a:hover { color: var(--orange); }
-
-    .nav-cta {
-      border: 1px solid var(--orange);
-      padding: 9px 17px;
-      border-radius: 5px;
-      color: var(--white);
-    }
-
-    /* Hero */
-    .hero {
-      padding: 115px 0 105px;
-      background:
-        radial-gradient(ellipse at 85% 25%, rgba(242,140,40,.13), transparent 35%),
-        linear-gradient(135deg, var(--azure), var(--navy));
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.5fr .8fr;
-      align-items: center;
-      gap: 65px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.8rem, 6vw, 5rem);
-      line-height: 1.08;
-      letter-spacing: -2px;
-      margin-bottom: 22px;
-    }
-
-    .hero h1 span { color: var(--orange); }
-
-    .hero-tagline {
-      color: var(--light);
-      font-size: 1.05rem;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    .hero-description {
-      max-width: 620px;
-      color: var(--muted);
-      margin-bottom: 32px;
-      font-size: 1rem;
-    }
-
-    .button-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 13px 23px;
-      border-radius: 5px;
-      font-size: .9rem;
-      font-weight: 700;
-      transition: .2s ease;
-    }
-
-    .button-primary {
-      background: var(--orange);
-      color: var(--azure);
-    }
-
-    .button-primary:hover {
-      background: var(--gold);
-      transform: translateY(-2px);
-    }
-
-    .button-secondary {
-      border: 1px solid rgba(255,255,255,.35);
-    }
-
-    .button-secondary:hover {
-      border-color: var(--orange);
-      color: var(--orange);
-    }
-
-    .hero-panel {
-      padding: 32px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: rgba(255,255,255,.045);
-    }
-
-    .hero-panel .monogram {
-      width: 66px;
-      height: 66px;
-      display: grid;
-      place-items: center;
-      background: var(--navy);
-      border-left: 4px solid var(--orange);
-      border-radius: 9px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 800;
-      margin-bottom: 24px;
-    }
-
-    .hero-panel h3 { margin-bottom: 12px; }
-
-    .hero-panel p {
-      color: var(--muted);
-      font-size: .9rem;
-    }
-
-    .availability {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      margin-top: 25px;
-      color: var(--light);
-      font-size: .8rem;
-    }
-
-    .availability::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      background: var(--gold);
-      border-radius: 50%;
-    }
-
-    /* Metrics */
-    .metrics {
-      background: var(--white);
-      color: var(--azure);
-      padding: 38px 0;
-    }
-
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      text-align: center;
-    }
-
-    .metric strong {
-      display: block;
-      font-family: 'Montserrat', sans-serif;
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      font-weight: 800;
-      color: var(--navy);
-    }
-
-    .metric span {
-      color: #64748B;
-      font-size: .85rem;
-    }
-
-    /* General sections */
-    section { padding: 95px 0; }
-
-    .about { background: var(--light); color: var(--charcoal); }
-
-    .about .section-intro { color: #596579; }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 65px;
-    }
-
-    .about-copy p {
-      color: #4C5869;
-      margin-bottom: 18px;
-    }
-
-    .about-facts {
-      background: var(--white);
-      padding: 30px;
-      border-radius: 10px;
-      border-top: 4px solid var(--orange);
-    }
-
-    .fact {
-      padding: 13px 0;
-      border-bottom: 1px solid #E5EAF0;
-    }
-
-    .fact:last-child { border-bottom: 0; }
-
-    .fact strong {
-      display: block;
-      color: var(--navy);
-      font-size: .85rem;
-      margin-bottom: 3px;
-    }
-
-    .fact span {
-      color: #64748B;
-      font-size: .88rem;
-    }
-
-    /* Expertise */
-    .expertise { background: var(--azure); }
-
-    .expertise-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .expertise-card {
-      padding: 27px;
-      background: rgba(255,255,255,.045);
-      border: 1px solid var(--border);
-      border-radius: 9px;
-    }
-
-    .card-number {
-      color: var(--orange);
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      font-size: .85rem;
-      margin-bottom: 20px;
-    }
-
-    .expertise-card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 12px;
-    }
-
-    .expertise-card p {
-      color: var(--muted);
-      font-size: .88rem;
-    }
-
-    /* Experience */
-    .experience {
-      background: var(--navy);
-    }
-
-    .timeline {
-      border-left: 2px solid rgba(242,140,40,.5);
-      margin-left: 9px;
-      padding-left: 30px;
-    }
-
-    .timeline-item {
-      position: relative;
-      padding: 0 0 38px;
-    }
-
-    .timeline-item:last-child { padding-bottom: 0; }
-
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: -38px;
-      top: 7px;
-      width: 13px;
-      height: 13px;
-      border-radius: 50%;
-      background: var(--orange);
-      border: 3px solid var(--navy);
-    }
-
-    .timeline-date {
-      color: var(--gold);
-      font-size: .78rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .timeline-item h3 { font-size: 1.1rem; margin-bottom: 4px; }
-
-    .timeline-company {
-      color: var(--muted);
-      font-size: .88rem;
-      margin-bottom: 12px;
-    }
-
-    .timeline-item ul {
-      padding-left: 18px;
-      color: var(--light);
-      font-size: .88rem;
-    }
-
-    .timeline-item li { margin-bottom: 6px; }
-
-    /* Tools */
-    .tools { background: var(--light); color: var(--charcoal); }
-
-    .tools .section-intro { color: #596579; }
-
-    .tool-groups {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    .tool-group {
-      padding: 25px;
-      border-radius: 9px;
-      background: var(--white);
-    }
-
-    .tool-group h3 {
-      font-size: .95rem;
-      color: var(--navy);
-      margin-bottom: 14px;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-    }
-
-    .tag {
-      padding: 7px 11px;
-      border-radius: 4px;
-      background: #EDF2F8;
-      color: #344256;
-      font-size: .78rem;
-      font-weight: 600;
-    }
-
-    /* Credentials */
-    .credentials { background: var(--azure); }
-
-    .credentials-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-    }
-
-    .credential-panel {
-      padding: 28px;
-      background: rgba(255,255,255,.045);
-      border: 1px solid var(--border);
-      border-radius: 9px;
-    }
-
-    .credential-panel h3 { margin-bottom: 18px; }
-
-    .credential-panel ul {
-      padding-left: 18px;
-      color: var(--muted);
-      font-size: .9rem;
-    }
-
-    .credential-panel li { margin-bottom: 9px; }
-
-    /* Contact */
-    .contact {
-      text-align: center;
-      background: linear-gradient(135deg, var(--navy), var(--azure));
-      border-top: 1px solid var(--border);
-    }
-
-    .contact .section-intro {
-      margin: 0 auto 30px;
-    }
-
-    .contact-email {
-      color: var(--gold);
-      font-weight: 600;
-      display: inline-block;
-      margin-top: 20px;
-    }
-
-    footer {
-      padding: 25px 0;
-      background: #020E19;
-      color: var(--muted);
-      font-size: .78rem;
-      text-align: center;
-    }
-
-    @media (max-width: 800px) {
-      .hero-grid, .about-grid { grid-template-columns: 1fr; }
-      .hero { padding: 80px 0; }
-      .hero-grid { gap: 40px; }
-      .expertise-grid { grid-template-columns: repeat(2, 1fr); }
-      .nav-links { gap: 13px; font-size: .75rem; }
-      .nav-cta { display: none; }
-    }
-
-    @media (max-width: 560px) {
-      nav { min-height: 68px; }
-      .nav-links { display: none; }
-      section { padding: 70px 0; }
-      .metrics-grid { grid-template-columns: 1fr; gap: 24px; }
-      .expertise-grid, .tool-groups, .credentials-grid { grid-template-columns: 1fr; }
-      .hero h1 { letter-spacing: -1px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Clen Guzarem — Digital Growth & Operations Support Specialist. SEO, performance marketing, e-commerce, CRM and business operations portfolio.">
+<meta name="theme-color" content="#041727">
+<title>Clen Guzarem | Digital Growth & Operations</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --azure:#041727;
+  --navy:#071A3A;
+  --orange:#F28C28;
+  --gold:#F5B335;
+  --white:#FFFFFF;
+  --light:#E8EEF6;
+  --charcoal:#1B2433;
+  --muted:#AAB8C9;
+  --border:rgba(255,255,255,.12);
+  --max:1160px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:Inter,sans-serif;background:var(--azure);color:var(--white);line-height:1.7}
+a{color:inherit;text-decoration:none}
+.container{width:min(91%,var(--max));margin:auto}
+h1,h2,h3,h4,.logo{font-family:Montserrat,sans-serif}
+h1{font-size:clamp(2.8rem,6vw,5.2rem);line-height:1.08;letter-spacing:-2px}
+h2{font-size:clamp(2rem,4vw,2.8rem);line-height:1.2;margin-bottom:18px}
+h3{font-size:1.08rem}
+p{margin-bottom:14px}
+.accent{color:var(--orange)}
+.eyebrow{color:var(--orange);font-size:.74rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+.section-intro{color:var(--muted);max-width:760px;margin-bottom:38px}
+section{padding:88px 0}
+.light-section{background:var(--light);color:var(--charcoal)}
+.light-section .section-intro{color:#596579}
+.light-section .eyebrow{color:#C66B16}
+.muted{color:var(--muted)}
+.small{font-size:.83rem}
+.tag-list{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+.tag{background:rgba(255,255,255,.08);border:1px solid var(--border);padding:7px 11px;border-radius:4px;font-size:.77rem;color:var(--light)}
+.light-section .tag{background:#EDF2F8;color:#344256;border-color:#DCE4EF}
+.btn{display:inline-block;padding:12px 21px;border-radius:5px;font-size:.86rem;font-weight:700;transition:.2s}
+.btn-primary{background:var(--orange);color:var(--azure)}
+.btn-primary:hover{background:var(--gold);transform:translateY(-2px)}
+.btn-outline{border:1px solid rgba(255,255,255,.35)}
+.btn-outline:hover{border-color:var(--orange);color:var(--orange)}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.card{padding:25px;background:rgba(255,255,255,.045);border:1px solid var(--border);border-radius:9px}
+.light-section .card{background:white;border-color:#E0E6EE}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+
+/* Navigation */
+header{position:sticky;top:0;z-index:100;background:rgba(4,23,39,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:1rem;font-weight:800;white-space:nowrap}
+.logo span{color:var(--orange)}
+.nav-links{display:flex;list-style:none;gap:19px;align-items:center;font-size:.78rem;color:var(--light)}
+.nav-links a:hover{color:var(--orange)}
+.nav-cta{border:1px solid var(--orange);padding:8px 14px;border-radius:5px;font-size:.8rem}
+
+/* Hero */
+.hero{padding:105px 0;background:radial-gradient(ellipse at 85% 20%,rgba(242,140,40,.14),transparent 35%),linear-gradient(135deg,var(--azure),var(--navy))}
+.hero-grid{display:grid;grid-template-columns:1.45fr .75fr;align-items:center;gap:55px}
+.hero h1 span{color:var(--orange)}
+.hero-subtitle{font-weight:700;color:var(--light);margin:20px 0 15px;font-size:1rem}
+.hero-copy{max-width:700px;color:var(--muted)}
+.hero-panel{padding:30px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:12px}
+.monogram{width:68px;height:68px;display:grid;place-items:center;background:var(--navy);border-left:4px solid var(--orange);border-radius:8px;font:800 1.5rem Montserrat;margin-bottom:22px}
+.hero-panel p{font-size:.88rem;color:var(--muted)}
+.hero-contact{font-size:.82rem;color:var(--light);margin-top:20px;overflow-wrap:anywhere}
+.hero-contact a:hover{color:var(--orange)}
+
+/* Metrics */
+.metrics{background:white;color:var(--navy);padding:30px 0}
+.metric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.metric strong{display:block;font:800 clamp(1.6rem,3vw,2.5rem) Montserrat}
+.metric span{font-size:.77rem;color:#64748B}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:45px}
+.about-copy p{color:#4C5869}
+.fact-list{padding:25px;background:white;border-radius:9px;border-top:4px solid var(--orange)}
+.fact{padding:12px 0;border-bottom:1px solid #E5EAF0}
+.fact:last-child{border:0}
+.fact strong{display:block;color:var(--navy);font-size:.83rem}
+.fact span{font-size:.86rem;color:#64748B}
+
+/* Expertise and experience */
+.expertise-card .number{color:var(--orange);font:800 .8rem Montserrat;margin-bottom:15px}
+.expertise-card p{color:var(--muted);font-size:.86rem;margin:10px 0 0}
+.timeline{border-left:2px solid rgba(242,140,40,.5);margin-left:10px;padding-left:29px}
+.timeline-item{position:relative;padding:0 0 35px}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-item:before{content:"";position:absolute;left:-37px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--orange);border:3px solid var(--navy)}
+.timeline-date{color:var(--gold);font-size:.76rem;font-weight:800;letter-spacing:.5px}
+.timeline-item h3{margin:5px 0}
+.timeline-company{font-size:.86rem;color:var(--muted)}
+.timeline-item ul{padding-left:19px;color:var(--light);font-size:.86rem;margin-top:12px}
+.timeline-item li{margin-bottom:6px}
+
+/* Portfolio evidence */
+.evidence-card{overflow:hidden}
+.evidence-visual{min-height:185px;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;background:linear-gradient(135deg,#0B2447,#142F52);border:1px dashed rgba(255,255,255,.3);border-radius:6px;color:#D5E0EE}
+.evidence-visual span{display:block;color:var(--gold);font:700 .8rem Montserrat;margin-bottom:7px}
+.evidence-card h3{margin:18px 0 8px}
+.evidence-card p{font-size:.84rem;color:var(--muted)}
+.evidence-card a{color:var(--gold);font-size:.82rem;font-weight:700}
+.evidence-card a:hover{color:var(--orange)}
+
+/* Case study */
+.case-study{border:1px solid var(--border);border-radius:10px;padding:30px;background:rgba(255,255,255,.035)}
+.case-study h3{font-size:1.25rem;margin-bottom:8px}
+.case-meta{font-size:.78rem;color:var(--gold);margin-bottom:18px}
+.case-study ul{padding-left:19px;color:var(--light);font-size:.87rem}
+.case-study li{margin-bottom:7px}
+.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0}
+.result{padding:16px 10px;text-align:center;background:rgba(255,255,255,.06);border-radius:7px}
+.result strong{display:block;font:800 1.45rem Montserrat;color:var(--gold)}
+.result span{font-size:.7rem;color:var(--muted)}
+
+/* Light tool cards */
+.tool-group{padding:24px;background:white;border-radius:8px}
+.tool-group h3{color:var(--navy);margin-bottom:12px}
+.tool-group p{font-size:.83rem;color:#596579}
+
+/* Skills */
+.skill-column{padding:25px;background:rgba(255,255,255,.045);border:1px solid var(--border);border-radius:8px}
+.skill-column h3{margin-bottom:14px;color:var(--gold)}
+.skill-column ul{padding-left:18px;color:var(--light);font-size:.86rem}
+.skill-column li{margin-bottom:8px}
+
+/* Credentials */
+.credential-card{padding:23px;background:rgba(255,255,255,.045);border:1px solid var(--border);border-radius:8px}
+.credential-card h3{margin-bottom:8px}
+.credential-card p{font-size:.84rem;color:var(--muted)}
+.credential-link{display:inline-block;color:var(--gold);font-size:.8rem;font-weight:700;margin-top:8px}
+.credential-link:hover{color:var(--orange)}
+
+/* Links and contact */
+.resource-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.resource{padding:16px 18px;background:rgba(255,255,255,.045);border:1px solid var(--border);border-radius:7px}
+.resource strong{display:block;font-size:.88rem}
+.resource a{font-size:.82rem;color:var(--gold);overflow-wrap:anywhere}
+.resource a:hover{color:var(--orange)}
+.contact{text-align:center;background:linear-gradient(135deg,var(--navy),var(--azure));border-top:1px solid var(--border)}
+.contact .section-intro{margin:0 auto 25px}
+footer{padding:25px 0;background:#020E19;color:var(--muted);font-size:.77rem;text-align:center}
+footer a{color:var(--gold)}
+
+@media(max-width:900px){
+ .nav-links{gap:10px;font-size:.7rem}
+ .hero-grid,.about-grid{grid-template-columns:1fr}
+ .grid-4{grid-template-columns:repeat(2,1fr)}
+ .grid-3{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:620px){
+ nav{min-height:65px}
+ .nav-links{display:none}
+ section{padding:68px 0}
+ .hero{padding:75px 0}
+ .grid-2,.grid-3,.grid-4,.resource-list{grid-template-columns:1fr}
+ .metric-grid{grid-template-columns:repeat(2,1fr);row-gap:25px}
+ .result-grid{grid-template-columns:repeat(2,1fr)}
+ h1{letter-spacing:-1px}
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <nav class="container">
-      <a href="#home" class="logo">CLEN <span>GUZAREM</span></a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#expertise">Expertise</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#tools">Tools</a></li>
-        <li><a href="#contact">Contact</a></li>
+<header>
+<nav class="container">
+  <a class="logo" href="#home">CLEN <span>GUZAREM</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#credentials">Credentials</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="#contact">Let's Connect</a>
+</nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container hero-grid">
+  <div>
+    <p class="eyebrow">Professional Portfolio</p>
+    <h1>Clen <span>Guzarem.</span></h1>
+    <p class="hero-subtitle">DIGITAL GROWTH & OPERATIONS SUPPORT SPECIALIST</p>
+    <p class="hero-copy">
+      DIGITAL MARKETING | PERFORMANCE MARKETING | E-COMMERCE | BUSINESS OPERATIONS
+    </p>
+    <p class="hero-copy" style="margin-top:18px">
+      A versatile digital growth and operations professional who supports
+      businesses through practical marketing execution, performance analysis,
+      e-commerce operations, lead generation, administrative coordination,
+      and reliable business support.
+    </p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#portfolio">Explore My Work</a>
+      <a class="btn btn-outline" href="#experience">Career Experience</a>
+      <a class="btn btn-outline" href="#contact">Contact Me</a>
+    </div>
+  </div>
+
+  <aside class="hero-panel">
+    <div class="monogram">CG</div>
+    <h3>Marketing. Performance. Operations.</h3>
+    <p>
+      Practical campaign execution, data-informed decisions, organized
+      marketing workflows, and dependable business support.
+    </p>
+    <div class="hero-contact">
+      <p><strong>Location</strong><br>Santander, Cebu, Philippines 6026</p>
+      <p><strong>Email</strong><br><a href="mailto:Clenthonguzarem29@gmail.com">Clenthonguzarem29@gmail.com</a></p>
+      <p><strong>WhatsApp</strong><br><a href="https://wa.me/639368447153">+63 936 8447 153</a></p>
+    </div>
+  </aside>
+</div>
+</section>
+
+<!-- PROOF METRICS -->
+<div class="metrics">
+<div class="container metric-grid">
+  <div class="metric"><strong>A$0.40</strong><span>CPC at or below</span></div>
+  <div class="metric"><strong>200K+</strong><span>Monthly ad impressions</span></div>
+  <div class="metric"><strong>20K+</strong><span>Sessions contributed</span></div>
+  <div class="metric"><strong>25–40%</strong><span>Less wasted ad spend</span></div>
+</div>
+</div>
+
+<!-- ABOUT -->
+<section class="light-section" id="about">
+<div class="container">
+  <p class="eyebrow">Professional Profile</p>
+  <h2>Professional <span class="accent">Summary</span></h2>
+  <p class="section-intro">Digital growth, performance marketing, e-commerce, and business operations.</p>
+
+  <div class="about-grid">
+    <div class="about-copy">
+      <p>
+        My professional background combines digital marketing, performance
+        marketing, and business operations, with hands-on experience supporting
+        businesses through campaign execution, SEO, social media management,
+        lead generation, CRM management, e-commerce operations, and marketing analytics.
+      </p>
+      <p>
+        Most recently, I worked directly with HEQS International and Priceworth
+        Furniture, handling digital marketing activities across Google Ads,
+        Microsoft Advertising, Amazon Ads, Meta Ads, and TikTok Ads. My work
+        covered campaign setup and optimization, keyword and competitor research,
+        budget management, SEO activities, conversion tracking, e-commerce
+        platform support, and performance reporting.
+      </p>
+      <p>
+        The campaigns I managed achieved CPC levels at or below A$0.40,
+        generated over 200,000 monthly impressions, and contributed to more
+        than 20,000 sessions, while helping reduce wasted advertising spend
+        by approximately 25 to 40 percent. I also developed Looker Studio
+        dashboards that continued to be used by the business after my engagement ended.
+      </p>
+      <p>
+        Before that, I worked as a Virtual Marketing Assistant and Social Media
+        Manager at Outsourced Doers, supporting content creation, social media
+        engagement, lead generation, landing pages, and virtual marketing operations.
+      </p>
+      <p>
+        I also use CRM and operations platforms such as HubSpot, GoHighLevel,
+        Notion, Podio, and Google Sheets to organize contacts, track opportunities,
+        monitor deal stages, manage follow-ups, and maintain structured records.
+      </p>
+      <p>
+        What I bring is a combination of practical marketing execution and
+        analytical thinking. I believe marketing performance should be measured
+        against actual business objectives. I focus on understanding what the
+        numbers mean, identifying opportunities or problems, and recommending
+        practical next steps.
+      </p>
+      <p>
+        I am looking for an opportunity where I can take greater ownership of
+        marketing activities, contribute ideas, work closely with leadership,
+        and continue developing my capabilities.
+      </p>
+    </div>
+
+    <aside class="fact-list">
+      <div class="fact"><strong>Professional Title</strong><span>Digital Growth & Operations Support Specialist</span></div>
+      <div class="fact"><strong>Location</strong><span>Santander Cebu, Philippines 6026</span></div>
+      <div class="fact"><strong>Email</strong><span>Clenthonguzarem29@gmail.com</span></div>
+      <div class="fact"><strong>WhatsApp</strong><span>+63 936 8447 153</span></div>
+      <div class="fact"><strong>Education</strong><span>Bachelor of Business Administration, Management — Silliman University, 2015–2018</span></div>
+      <div class="fact"><strong>Languages</strong><span>English, Tagalog, Cebuano</span></div>
+    </aside>
+  </div>
+</div>
+</section>
+
+<!-- CAREER EXPERIENCE -->
+<section id="experience">
+<div class="container">
+  <p class="eyebrow">Career Background</p>
+  <h2>Professional <span class="accent">Experience</span></h2>
+  <p class="section-intro">Employment history, responsibilities, and practical experience across marketing, operations, administration, and customer support.</p>
+
+  <div class="timeline">
+
+    <article class="timeline-item">
+      <div class="timeline-date">NOVEMBER 2025 – AUGUST 2026</div>
+      <h3>SEO / Paid Campaign Manager</h3>
+      <p class="timeline-company">HEQS INTERNATIONAL — HEQS International / Priceworth Furniture</p>
+      <p class="muted small">Managed digital marketing operations for an e-commerce business, focusing on SEO, paid advertising, campaign optimization, analytics, and e-commerce support. Worked across multiple advertising platforms while maintaining marketing measurement, reporting, and online product operations.</p>
+      <ul>
+        <li>Set up, structured, monitored, and optimized campaigns across Google Ads, Microsoft Advertising, Amazon Ads, Meta Ads, and TikTok Ads, including keyword research, competitor analysis, bidding, budgets, and search-term analysis.</li>
+        <li>Configured and troubleshot GA4, Google Tag Manager, and conversion tracking; analyzed Google Search Console data and website metadata to support SEO improvements.</li>
+        <li>Managed Google Merchant Center feeds and Shopify catalog operations, investigated Amazon Seller Central issues, and developed Looker Studio dashboards that remained live and in use after the engagement ended.</li>
       </ul>
-      <a class="nav-cta" href="#contact">Let's Connect</a>
-    </nav>
-  </header>
+    </article>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">Professional Portfolio</p>
-          <h1>Clen <span>Guzarem.</span></h1>
-          <p class="hero-tagline">Digital Marketing VA | Social Media, Ads, SEO & Admin Support</p>
-          <p class="hero-description">
-            I help businesses strengthen their online presence, manage digital
-            campaigns, generate leads, and keep marketing operations organized.
-            My experience combines digital marketing execution with customer
-            service and administrative support.
-          </p>
-          <div class="button-group">
-            <a class="button button-primary" href="#experience">Explore My Experience</a>
-            <a class="button button-secondary" href="#contact">Contact Me</a>
-          </div>
-        </div>
+    <article class="timeline-item">
+      <div class="timeline-date">FEBRUARY 2025 – JULY 2025</div>
+      <h3>Virtual Marketing Assistant / Social Media Manager</h3>
+      <p class="timeline-company">DONEVERSE (OUTSOURCED DOERS)</p>
+      <p class="muted small">Supported business owners and entrepreneurs with digital marketing execution, social media management, and virtual marketing operations. Focused on maintaining online presence, managing audience engagement, and supporting lead generation.</p>
+      <ul>
+        <li>Planned, created, and published social media content across Facebook, Instagram, and TikTok, including supporting visual materials.</li>
+        <li>Developed lead magnets and landing pages using GoHighLevel to support lead generation and customer acquisition.</li>
+        <li>Managed inbound messages and customer inquiries, organized prospect information, and conducted follow-ups to support audience engagement and lead management.</li>
+      </ul>
+    </article>
 
-        <aside class="hero-panel">
-          <div class="monogram">CG</div>
-          <h3>Marketing. Operations. Results.</h3>
-          <p>
-            A practical, data-informed approach to SEO, paid advertising,
-            social media, analytics, and day-to-day business support.
-          </p>
-          <div class="availability">Based in Cebu, Philippines</div>
-        </aside>
-      </div>
-    </section>
+    <article class="timeline-item">
+      <div class="timeline-date">FEBRUARY 2024 – AUGUST 2024</div>
+      <h3>Records Retrieval Specialist</h3>
+      <p class="timeline-company">PEAK OUTSOURCING DUMAGUETE</p>
+      <p class="muted small">Handled high-volume records retrieval operations for a law firm, coordinating with hospitals, educational institutions, police departments, and other record custodians to obtain requested documentation. Maintained accurate request records while following established procedures for confidential information handling.</p>
+      <ul>
+        <li>Made high-volume outbound calls to hospitals, schools, police departments and other record custodians.</li>
+        <li>Tracked multiple requests and followed up on pending ones until the records were retrieved.</li>
+        <li>Kept accurate documentation and request statuses while protecting confidentiality.</li>
+      </ul>
+    </article>
 
-    <div class="metrics">
-      <div class="container metrics-grid">
-        <div class="metric">
-          <strong>A$0.40</strong>
-          <span>Cost per click at or below</span>
-        </div>
-        <div class="metric">
-          <strong>200K+</strong>
-          <span>Monthly ad impressions</span>
-        </div>
-        <div class="metric">
-          <strong>25–40%</strong>
-          <span>Reduction in wasted ad spend</span>
-        </div>
+    <article class="timeline-item">
+      <div class="timeline-date">DECEMBER 2018 – FEBRUARY 2020</div>
+      <h3>Executive Administrative Assistant / Appointment Setter</h3>
+      <p class="timeline-company">WHALESHARK TRAVEL SERVICES</p>
+      <p class="muted small">Provided administrative and operational support to executives, assisting with daily business activities, appointment coordination, travel bookings, and customer communication. Helped maintain organized schedules, business records, and timely client follow-ups.</p>
+      <ul>
+        <li>Managed appointment setting, scheduling, online bookings, and customer coordination.</li>
+        <li>Handled administrative documentation, data entry, online research, and basic bookkeeping using Excel and Google Sheets.</li>
+        <li>Coordinated customer follow-ups and booking confirmations.</li>
+        <li>Provided day-to-day administrative support for a travel services business, focused on scheduling, bookings and customer communication.</li>
+      </ul>
+    </article>
+
+    <article class="timeline-item">
+      <div class="timeline-date">NOVEMBER 2017 – JULY 2018</div>
+      <h3>Customer Service & Sales Representative</h3>
+      <p class="timeline-company">TELETECH (TTEC)</p>
+      <p class="muted small">Provided inbound customer service, technical assistance, and sales support for the Weight Watchers / Humana account. Focused on understanding customer needs, resolving service concerns, explaining product offerings, and identifying relevant sales opportunities while maintaining customer satisfaction.</p>
+      <ul>
+        <li>Handled inbound customer inquiries, technical concerns, and product or service-related issues.</li>
+        <li>Supported consultative selling, upselling, cross-selling, and customer retention through product recommendations.</li>
+        <li>Resolved customer concerns professionally while maintaining service quality and company procedures.</li>
+      </ul>
+    </article>
+
+  </div>
+</div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="light-section" id="portfolio">
+<div class="container">
+  <p class="eyebrow">Selected Work & Evidence</p>
+  <h2>Portfolio & <span class="accent">Work Samples</span></h2>
+  <p class="section-intro">Selected marketing deliverables, campaign reporting, landing pages, and SEO evidence. Additional screenshots and lead magnets will be added as they are prepared.</p>
+
+  <div class="grid-2">
+
+    <article class="card evidence-card">
+      <div class="evidence-visual"><div><span>SEO PERFORMANCE</span>Google Search Console & Organic Search Evidence<br><small>Dashboard screenshot to be added</small></div></div>
+      <h3>SEO & Organic Search Performance</h3>
+      <p>Search visibility, clicks, impressions, CTR, average position, organic traffic, and conversion reporting.</p>
+      <a href="#seo-results">View SEO results ↓</a>
+    </article>
+
+    <article class="card evidence-card">
+      <div class="evidence-visual"><div><span>LOOKER STUDIO</span>Marketing Performance Dashboard<br><small>Dashboard screenshot to be added</small></div></div>
+      <h3>Looker Studio Reporting</h3>
+      <p>Marketing dashboards developed to monitor business performance and support ongoing reporting.</p>
+      <a href="#seo-results">View reporting metrics ↓</a>
+    </article>
+
+    <article class="card evidence-card">
+      <div class="evidence-visual"><div><span>GOOGLE ADS & PPC</span>Campaign Structure & Performance<br><small>Campaign screenshots to be added</small></div></div>
+      <h3>Paid Advertising Campaigns</h3>
+      <p>Campaign setup, keyword research, competitor analysis, budget management, bidding, search-term analysis, and optimization.</p>
+      <a href="#paid-results">View campaign results ↓</a>
+    </article>
+
+    <article class="card evidence-card">
+      <div class="evidence-visual"><div><span>GOHIGHLEVEL</span>Landing Page Development<br><small>Live sample links below</small></div></div>
+      <h3>Landing Pages & Lead Generation</h3>
+      <p>Sample landing pages built using GoHighLevel / LeadConnector.</p>
+      <a href="https://sites.leadconnectorhq.com/preview/iLmygHKXAaZwS3NHwWQv?notrack=true" target="_blank" rel="noopener">View Landing Page 01 ↗</a><br>
+      <a href="https://sites.leadconnectorhq.com/preview/Z93RT2A52FNoAw6d2VcS?notrack=true" target="_blank" rel="noopener">View Landing Page 02 ↗</a>
+    </article>
+
+    <article class="card evidence-card">
+      <div class="evidence-visual"><div><span>SEO RESEARCH</span>Keyword Research & Technical SEO<br><small>Audit examples to be added</small></div></div>
+      <h3>SEO Research & Website Optimization</h3>
+      <p>Keyword research, website metadata review, technical SEO checks, and search performance analysis.</p>
+    </article>
+
+    <article class="card evidence-card">
+      <div class="evidence-visual"><div><span>SOCIAL MEDIA</span>Content & Social Media Management<br><small>Content examples to be added</small></div></div>
+      <h3>Social Media & Content</h3>
+      <p>Social media planning, content creation, publishing, audience engagement, and inbound response management.</p>
+    </article>
+
+    <article class="card evidence-card">
+      <div class="evidence-visual"><div><span>CRM & OPERATIONS</span>Contact and Opportunity Tracking<br><small>Workflow samples to be added</small></div></div>
+      <h3>CRM & Business Operations</h3>
+      <p>Contact organization, deal stages, task tracking, notes, follow-ups, and operational documentation.</p>
+    </article>
+
+    <article class="card evidence-card">
+      <div class="evidence-visual"><div><span>LEAD MAGNETS</span>Lead Generation Assets<br><small>To be added later</small></div></div>
+      <h3>Lead Magnets & Funnels</h3>
+      <p>Lead magnet designs and additional funnel samples will be added to this section later.</p>
+    </article>
+
+  </div>
+</div>
+</section>
+
+<!-- SEO RESULTS -->
+<section id="seo-results">
+<div class="container">
+  <p class="eyebrow">Search Engine Optimization</p>
+  <h2>SEO Performance <span class="accent">Evidence</span></h2>
+  <p class="section-intro">Selected organic search and analytics metrics from the reporting dashboard associated with the HEQS International / Priceworth Furniture engagement.</p>
+
+  <div class="case-study">
+    <h3>Organic Search Performance</h3>
+    <p class="case-meta">GOOGLE SEARCH CONSOLE · NOVEMBER 14, 2025 – AUGUST 31, 2026</p>
+    <div class="result-grid">
+      <div class="result"><strong>472,556</strong><span>Search impressions</span></div>
+      <div class="result"><strong>10,302</strong><span>Search clicks</span></div>
+      <div class="result"><strong>2.18%</strong><span>Site CTR</span></div>
+      <div class="result"><strong>23.29</strong><span>Average position</span></div>
+    </div>
+    <p class="muted small">Dashboard-reported changes: impressions +11.4%, clicks +120.8%, and site CTR +98.1%.</p>
+  </div>
+
+  <div class="case-study" style="margin-top:22px">
+    <h3>Organic Traffic & Conversion Reporting</h3>
+    <p class="case-meta">GOOGLE ANALYTICS 4 · LOOKER STUDIO DASHBOARD</p>
+    <div class="result-grid">
+      <div class="result"><strong>10,496</strong><span>Organic users</span></div>
+      <div class="result"><strong>17,732</strong><span>Organic sessions</span></div>
+      <div class="result"><strong>3,089</strong><span>Organic conversions</span></div>
+      <div class="result"><strong>17.42%</strong><span>Organic conversion rate</span></div>
+    </div>
+    <p class="muted small">Selected dashboard metrics. Conversion definitions and reporting attribution should be reviewed alongside the original dashboard when interpreting these figures.</p>
+  </div>
+
+  <div class="grid-2" style="margin-top:22px">
+    <div class="card">
+      <h3>SEO & Website Work</h3>
+      <ul class="small muted" style="padding-left:18px;margin-top:12px">
+        <li>Analyzed Google Search Console data and website metadata.</li>
+        <li>Conducted keyword and competitor research.</li>
+        <li>Reviewed search performance and organic traffic.</li>
+        <li>Supported website optimization and technical tracking.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Reporting & Measurement</h3>
+      <ul class="small muted" style="padding-left:18px;margin-top:12px">
+        <li>Collected and reviewed GA4 and Search Console data.</li>
+        <li>Developed Looker Studio dashboards.</li>
+        <li>Monitored traffic, impressions, clicks, CTR, and conversions.</li>
+        <li>Presented findings to support performance decisions.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- PAID RESULTS -->
+<section class="light-section" id="paid-results">
+<div class="container">
+  <p class="eyebrow">Performance Marketing</p>
+  <h2>Paid Advertising <span class="accent">Results</span></h2>
+  <p class="section-intro">Campaign performance and optimization experience across multiple advertising platforms.</p>
+  <div class="result-grid">
+    <div class="result"><strong>A$0.40</strong><span>CPC at or below</span></div>
+    <div class="result"><strong>200K+</strong><span>Monthly impressions</span></div>
+    <div class="result"><strong>20K+</strong><span>Sessions contributed</span></div>
+    <div class="result"><strong>25–40%</strong><span>Reduction in wasted spend</span></div>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <h3>Advertising Platforms</h3>
+      <div class="tag-list">
+        <span class="tag">Google Ads</span><span class="tag">Microsoft Advertising</span>
+        <span class="tag">Amazon Ads</span><span class="tag">Meta Ads</span><span class="tag">TikTok Ads</span>
       </div>
     </div>
-
-    <section class="about" id="about">
-      <div class="container">
-        <p class="eyebrow">Professional Profile</p>
-        <h2>About <span class="accent">Me</span></h2>
-        <p class="section-intro">
-          Digital marketing support backed by campaign execution,
-          customer service, and administrative experience.
-        </p>
-
-        <div class="about-grid">
-          <div class="about-copy">
-            <p>
-              I am a Digital Marketing Virtual Assistant with hands-on
-              experience in SEO, paid advertising, social media management,
-              analytics, and marketing operations.
-            </p>
-            <p>
-              My work includes managing campaigns across Google, Microsoft,
-              Amazon, Meta, and TikTok; monitoring performance through GA4
-              and Google Tag Manager; and preparing KPI reports to support
-              campaign decisions.
-            </p>
-            <p>
-              I also bring experience in lead generation, landing pages,
-              customer engagement, appointment setting, records retrieval,
-              and executive administrative support.
-            </p>
-            <p>
-              I value clear communication, accurate execution, organized
-              workflows, and measurable business outcomes.
-            </p>
-          </div>
-
-          <div class="about-facts">
-            <div class="fact">
-              <strong>Location</strong>
-              <span>Santander, Cebu, Philippines</span>
-            </div>
-            <div class="fact">
-              <strong>Professional Focus</strong>
-              <span>SEO, Paid Campaigns & Digital Marketing Support</span>
-            </div>
-            <div class="fact">
-              <strong>Education</strong>
-              <span>Bachelor of Business Administration — Management</span>
-            </div>
-            <div class="fact">
-              <strong>Languages</strong>
-              <span>English, Tagalog, Cebuano</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="expertise" id="expertise">
-      <div class="container">
-        <p class="eyebrow">What I Do</p>
-        <h2>Core <span class="accent">Expertise</span></h2>
-        <p class="section-intro">
-          Practical marketing and operational capabilities that support
-          business visibility, lead generation, and campaign performance.
-        </p>
-
-        <div class="expertise-grid">
-          <article class="expertise-card">
-            <div class="card-number">01 / SEO</div>
-            <h3>SEO & Keyword Research</h3>
-            <p>Search optimization, keyword research, website support, and performance monitoring.</p>
-          </article>
-
-          <article class="expertise-card">
-            <div class="card-number">02 / PPC</div>
-            <h3>Paid Advertising</h3>
-            <p>Campaign management and optimization across Google, Microsoft, Amazon, Meta, and TikTok.</p>
-          </article>
-
-          <article class="expertise-card">
-            <div class="card-number">03 / DATA</div>
-            <h3>Analytics & Tracking</h3>
-            <p>GA4, Google Tag Manager, conversion tracking, pixels, and KPI reporting.</p>
-          </article>
-
-          <article class="expertise-card">
-            <div class="card-number">04 / SOCIAL</div>
-            <h3>Social Media Management</h3>
-            <p>Content planning, platform management, audience engagement, and inbound responses.</p>
-          </article>
-
-          <article class="expertise-card">
-            <div class="card-number">05 / LEADS</div>
-            <h3>Lead Generation Support</h3>
-            <p>Lead magnets, landing pages, funnels, appointment setting, and follow-up support.</p>
-          </article>
-
-          <article class="expertise-card">
-            <div class="card-number">06 / OPS</div>
-            <h3>Admin & Customer Support</h3>
-            <p>Executive assistance, customer service, scheduling, data entry, and operational coordination.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="experience" id="experience">
-      <div class="container">
-        <p class="eyebrow">Career Background</p>
-        <h2>Professional <span class="accent">Experience</span></h2>
-        <p class="section-intro">
-          Selected roles and responsibilities from my professional background.
-        </p>
-
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="timeline-date">NOV 2025 – AUG 2026</div>
-            <h3>SEO & Paid Campaign Manager</h3>
-            <p class="timeline-company">HEQS International / Priceworth Furniture</p>
-            <ul>
-              <li>Managed Google, Microsoft, Amazon, Meta, and TikTok campaigns.</li>
-              <li>Achieved CPC at or below A$0.40, 200K+ monthly impressions, and 20K+ sessions.</li>
-              <li>Used GA4 and GTM for tracking and weekly KPI reporting.</li>
-              <li>Reduced wasted advertising spend by 25–40%.</li>
-            </ul>
-          </article>
-
-          <article class="timeline-item">
-            <div class="timeline-date">FEB 2025 – JUL 2025</div>
-            <h3>Virtual Marketing Assistant | Social Media Manager</h3>
-            <p class="timeline-company">Outsourced Doers</p>
-            <ul>
-              <li>Completed seven MyTraining badges across digital marketing and administrative subjects.</li>
-              <li>Built lead magnets, funnels, and landing pages.</li>
-              <li>Drafted TikTok, Instagram, and Facebook content.</li>
-              <li>Managed engagement and inbound responses.</li>
-            </ul>
-          </article>
-
-          <article class="timeline-item">
-            <div class="timeline-date">FEB 2024 – SEP 2024</div>
-            <h3>Records Retrieval Specialist</h3>
-            <p class="timeline-company">Peak Outsourcing Dumaguete</p>
-            <ul>
-              <li>Retrieved records by phone while following procedures for sensitive information.</li>
-              <li>Worked toward a daily target of 70 calls or records, reaching up to 120 on some days.</li>
-              <li>Recorded retrieval success improvements of approximately 15–25%.</li>
-              <li>Recognized as Top Performer in April 2024 with a 99.81% result.</li>
-            </ul>
-          </article>
-
-          <article class="timeline-item">
-            <div class="timeline-date">DEC 2018 – FEB 2020</div>
-            <h3>Executive Admin Assistant | Appointment Setter | Bookkeeper</h3>
-            <p class="timeline-company">Whaleshark Travel Services</p>
-            <ul>
-              <li>Supported executive scheduling, bookings, customer support, data entry, and basic bookkeeping.</li>
-              <li>Designed social graphics and supported website optimization and Google Ads.</li>
-              <li>Improved booking confirmation speed by approximately 20–30% through structured follow-up.</li>
-            </ul>
-          </article>
-
-          <article class="timeline-item">
-            <div class="timeline-date">NOV 2017 – JUL 2018 · SEASONAL</div>
-            <h3>Call Sales | Customer Service Representative</h3>
-            <p class="timeline-company">TeleTech Dumaguete</p>
-            <ul>
-              <li>Handled inbound customer care, technical support, and sales for Humana clients.</li>
-              <li>Earned Top NPS (98.78%) and Top IR (99.52%) recognition in Q1 2018.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="tools" id="tools">
-      <div class="container">
-        <p class="eyebrow">Technology Stack</p>
-        <h2>Tools & <span class="accent">Platforms</span></h2>
-        <p class="section-intro">
-          Platforms and tools used across marketing, analytics, productivity,
-          and administrative workflows.
-        </p>
-
-        <div class="tool-groups">
-          <div class="tool-group">
-            <h3>Advertising Platforms</h3>
-            <div class="tags">
-              <span class="tag">Google Ads</span>
-              <span class="tag">Microsoft Advertising</span>
-              <span class="tag">Amazon Ads</span>
-              <span class="tag">Meta Ads</span>
-              <span class="tag">TikTok Ads</span>
-            </div>
-          </div>
-
-          <div class="tool-group">
-            <h3>Analytics & Tracking</h3>
-            <div class="tags">
-              <span class="tag">GA4</span>
-              <span class="tag">Google Tag Manager</span>
-              <span class="tag">Search Console</span>
-              <span class="tag">Looker Studio</span>
-              <span class="tag">Meta Pixel</span>
-              <span class="tag">TikTok Pixel & CAPI</span>
-            </div>
-          </div>
-
-          <div class="tool-group">
-            <h3>Marketing & Lead Generation</h3>
-            <div class="tags">
-              <span class="tag">GoHighLevel</span>
-              <span class="tag">Google Merchant Center</span>
-              <span class="tag">SEO</span>
-              <span class="tag">Keyword Research</span>
-              <span class="tag">Landing Pages</span>
-              <span class="tag">Lead Magnets</span>
-            </div>
-          </div>
-
-          <div class="tool-group">
-            <h3>Productivity & Creative</h3>
-            <div class="tags">
-              <span class="tag">Google Workspace</span>
-              <span class="tag">Notion</span>
-              <span class="tag">Asana</span>
-              <span class="tag">ClickUp</span>
-              <span class="tag">Make</span>
-              <span class="tag">Canva</span>
-              <span class="tag">PosterMyWall</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="credentials" id="credentials">
-      <div class="container">
-        <p class="eyebrow">Qualifications</p>
-        <h2>Education & <span class="accent">Certifications</span></h2>
-        <div class="credentials-grid">
-          <div class="credential-panel">
-            <h3>Education</h3>
-            <ul>
-              <li>Bachelor of Business Administration</li>
-              <li>Major in Management</li>
-              <li>Silliman University, 2015–2018</li>
-            </ul>
-          </div>
-          <div class="credential-panel">
-            <h3>Certifications</h3>
-            <ul>
-              <li>Google Analytics (GA4)</li>
-              <li>Google Ads Search</li>
-              <li>Google Ads Shopping</li>
-              <li>Google Tag Manager Fundamentals</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="container">
-        <p class="eyebrow">Get in Touch</p>
-        <h2>Let's Work <span class="accent">Together.</span></h2>
-        <p class="section-intro">
-          For recruitment opportunities, professional inquiries, or
-          potential collaboration, you can reach me through email.
-        </p>
-        <a class="button button-primary" href="mailto:clenthonguzarem29@gmail.com">
-          Email Me
-        </a>
-        <br>
-        <a class="contact-email" href="mailto:clenthonguzarem29@gmail.com">
-          clenthonguzarem29@gmail.com
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>© <span id="year"></span> Clen Guzarem. Professional Portfolio.</p>
+    <div class="card">
+      <h3>Campaign Responsibilities</h3>
+      <ul class="small" style="padding-left:18px;margin-top:10px">
+        <li>Campaign setup, structure, monitoring, and optimization.</li>
+        <li>Keyword and competitor research.</li>
+        <li>Bidding, budget management, and search-term analysis.</li>
+        <li>Conversion tracking and performance reporting.</li>
+      </ul>
     </div>
-  </footer>
+  </div>
+</div>
+</section>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<!-- EXPERTISE -->
+<section id="expertise">
+<div class="container">
+  <p class="eyebrow">Professional Capabilities</p>
+  <h2>Core Areas of <span class="accent">Expertise</span></h2>
+  <p class="section-intro">A cross-functional skill set supporting digital growth, marketing execution, and business operations.</p>
+  <div class="grid-3">
+    <article class="card expertise-card"><div class="number">01 / SEO</div><h3>SEO & Website Optimization</h3><p>Keyword research, on-page SEO, technical SEO checks, local SEO, website metadata, and organic search performance.</p></article>
+    <article class="card expertise-card"><div class="number">02 / PPC</div><h3>Paid Advertising</h3><p>Google, Microsoft, Amazon, Meta, and TikTok campaign setup, management, analysis, and optimization.</p></article>
+    <article class="card expertise-card"><div class="number">03 / ANALYTICS</div><h3>Analytics & Tracking</h3><p>GA4, Google Tag Manager, conversion tracking, Search Console, pixels, and Looker Studio reporting.</p></article>
+    <article class="card expertise-card"><div class="number">04 / E-COMMERCE</div><h3>E-commerce Operations</h3><p>Shopify catalog operations, Google Merchant Center feeds, Amazon Seller Central issue investigation, and online product operations.</p></article>
+    <article class="card expertise-card"><div class="number">05 / CRM</div><h3>CRM & Lead Management</h3><p>HubSpot, GoHighLevel, Podio, contact management, deal stages, follow-ups, and lead tracking.</p></article>
+    <article class="card expertise-card"><div class="number">06 / OPERATIONS</div><h3>Business & Admin Support</h3><p>Executive support, appointment setting, scheduling, customer service, documentation, and administrative coordination.</p></article>
+  </div>
+</div>
+</section>
 
+<!-- SEO KNOWLEDGE -->
+<section class="light-section" id="seo-method">
+<div class="container">
+  <p class="eyebrow">SEO Knowledge & Methodology</p>
+  <h2>SEO Tools & <span class="accent">Approach</span></h2>
+  <p class="section-intro">Tools and workflows I use or understand across on-page, technical, local SEO, keyword research, and reporting.</p>
+
+  <div class="grid-2">
+    <div class="tool-group">
+      <h3>On-Page SEO</h3>
+      <p>For on-page SEO, the best place to work is WordPress with a free SEO plugin, either Rank Math or Yoast SEO. These let us edit titles, meta descriptions and focus keywords, and they also handle XML sitemaps, schema markup, redirects, canonical settings and breadcrumbs.</p>
+      <div class="tag-list"><span class="tag">WordPress</span><span class="tag">Rank Math</span><span class="tag">Yoast SEO</span></div>
+    </div>
+    <div class="tool-group">
+      <h3>Technical SEO</h3>
+      <p>Screaming Frog crawls a site and finds broken links, redirect chains, missing or duplicate titles and metas, and heading problems. Ahrefs supports site audit plus internal link and backlink data checks. Google Search Console helps identify indexing issues, sitemaps, Core Web Vitals, and query-level clicks and positions.</p>
+      <div class="tag-list"><span class="tag">Screaming Frog</span><span class="tag">Ahrefs</span><span class="tag">Google Search Console</span><span class="tag">PageSpeed Insights</span></div>
+    </div>
+    <div class="tool-group">
+      <h3>Analytics & Keyword Research</h3>
+      <p>GA4 helps review traffic and user behavior. Semrush and Google Keyword Planner support keyword research. PageSpeed Insights and Pingdom are used for page-speed testing.</p>
+      <div class="tag-list"><span class="tag">GA4</span><span class="tag">Semrush</span><span class="tag">Google Keyword Planner</span><span class="tag">Pingdom</span></div>
+    </div>
+    <div class="tool-group">
+      <h3>Local SEO</h3>
+      <p>Google Business Profile manages listings, reviews and local visibility. I have a working understanding of BrightLocal and understand that it is used for local SEO tracking, Google Business Profile management, citations, and review monitoring. I am confident I can learn the platform quickly and apply it to client reporting.</p>
+      <div class="tag-list"><span class="tag">Google Business Profile</span><span class="tag">BrightLocal</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- REPORTING -->
+<section id="reporting">
+<div class="container">
+  <p class="eyebrow">Performance Measurement</p>
+  <h2>How I <span class="accent">Report</span></h2>
+  <p class="section-intro">My approach to gathering data, evaluating performance, and translating reporting into practical recommendations.</p>
+  <div class="case-study">
+    <p>I would gather data from Google Search Console, GA4, Google Business Profile, and the keyword-tracking tool.</p>
+    <p>I would summarize organic traffic, impressions, clicks, average position, keyword movement, conversions or leads, and local-search performance where relevant. I would also include completed SEO actions during the month and any issues identified.</p>
+    <p>Then I would explain the results in simple language: what improved, what declined, why it may have happened, and what actions I recommend for the next month. My goal is to make the report clear, accurate, and useful for the client.</p>
+  </div>
+  <div class="grid-2" style="margin-top:20px">
+    <div class="card">
+      <h3>Paid Advertising Metrics</h3>
+      <p class="muted small">CPC, CTR, conversions, cost per acquisition, and overall campaign efficiency.</p>
+    </div>
+    <div class="card">
+      <h3>SEO & Organic Metrics</h3>
+      <p class="muted small">Search visibility, keyword performance, organic traffic, and relevant website engagement.</p>
+    </div>
+    <div class="card">
+      <h3>Social Media & Content</h3>
+      <p class="muted small">Reach, engagement, audience growth, and whether content is generating meaningful interest.</p>
+    </div>
+    <div class="card">
+      <h3>Business Outcomes</h3>
+      <p class="muted small">Candidate inquiries, applications, employer inquiries, qualified leads, and conversions for recruitment and staffing businesses.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- CRM -->
+<section class="light-section" id="crm">
+<div class="container">
+  <p class="eyebrow">CRM & Business Operations</p>
+  <h2>CRM & <span class="accent">Operations</span></h2>
+  <p class="section-intro">I am also fond of using HubSpot CRM to track digital-product sales and job applications. I use HubSpot to organize contacts, track opportunities, monitor deal stages, and manage follow-ups.</p>
+  <div class="grid-2">
+    <div class="tool-group">
+      <h3>CRM & Contact Management</h3>
+      <p>For CRM and operations, I use HubSpot to manage contacts, companies, deals, tasks, notes, and follow-ups. I also use GoHighLevel for CRM automation and email marketing.</p>
+      <div class="tag-list"><span class="tag">HubSpot</span><span class="tag">GoHighLevel</span><span class="tag">Zoho</span><span class="tag">Podio</span></div>
+    </div>
+    <div class="tool-group">
+      <h3>Documentation & Tracking</h3>
+      <p>Notion, Podio, and Google Sheets help me organize tasks, documentation, reporting, and structured tracking.</p>
+      <div class="tag-list"><span class="tag">Notion</span><span class="tag">Google Sheets</span><span class="tag">Asana</span><span class="tag">ClickUp</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools">
+<div class="container">
+  <p class="eyebrow">Technology Stack</p>
+  <h2>Tools & <span class="accent">Platforms</span></h2>
+  <p class="section-intro">Platforms and tools used across digital marketing, analytics, e-commerce, CRM, productivity, and business operations.</p>
+
+  <div class="grid-2">
+    <div class="card"><h3>Advertising Platforms</h3><div class="tag-list"><span class="tag">Google Ads</span><span class="tag">Microsoft Advertising</span><span class="tag">Amazon Ads</span><span class="tag">Meta Ads</span><span class="tag">TikTok Ads</span></div></div>
+    <div class="card"><h3>Analytics & Tracking</h3><div class="tag-list"><span class="tag">GA4</span><span class="tag">Google Tag Manager</span><span class="tag">Google Search Console</span><span class="tag">Looker Studio</span><span class="tag">Meta Pixel</span><span class="tag">TikTok Pixel & CAPI</span></div></div>
+    <div class="card"><h3>SEO & Research</h3><div class="tag-list"><span class="tag">WordPress</span><span class="tag">Rank Math</span><span class="tag">Yoast SEO</span><span class="tag">Screaming Frog</span><span class="tag">Ahrefs</span><span class="tag">Semrush</span><span class="tag">Google Keyword Planner</span><span class="tag">BrightLocal</span><span class="tag">Pingdom</span><span class="tag">PageSpeed Insights</span></div></div>
+    <div class="card"><h3>CRM & Marketing Operations</h3><div class="tag-list"><span class="tag">HubSpot</span><span class="tag">GoHighLevel</span><span class="tag">Zoho</span><span class="tag">Podio</span><span class="tag">Google Sheets</span><span class="tag">Google Merchant Center</span><span class="tag">Shopify</span><span class="tag">Amazon Seller Central</span></div></div>
+    <div class="card"><h3>Productivity & Project Management</h3><div class="tag-list"><span class="tag">Google Workspace</span><span class="tag">Microsoft Excel</span><span class="tag">Notion</span><span class="tag">Asana</span><span class="tag">ClickUp</span><span class="tag">Make</span></div></div>
+    <div class="card"><h3>Creative & Social Media</h3><div class="tag-list"><span class="tag">Canva</span><span class="tag">PosterMyWall</span><span class="tag">Meta Business Suite</span><span class="tag">Facebook</span><span class="tag">Instagram</span><span class="tag">TikTok</span></div></div>
+  </div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section class="light-section" id="skills">
+<div class="container">
+  <p class="eyebrow">Skills & Capabilities</p>
+  <h2>Professional <span class="accent">Skills</span></h2>
+  <div class="grid-2">
+    <div class="skill-column">
+      <h3>Advanced Skills</h3>
+      <ul>
+        <li>SEO & Website Optimization</li>
+        <li>Google Ads Campaign Management</li>
+        <li>Microsoft Advertising (Bing Ads)</li>
+        <li>Executive & Administrative Support</li>
+        <li>Appointment Setting & Scheduling</li>
+        <li>Customer Service & Client Communication</li>
+        <li>Records Retrieval & Information Verification</li>
+        <li>Social Media Management</li>
+        <li>Lead Generation & Follow-up Management</li>
+        <li>Google Analytics 4 (GA4)</li>
+        <li>Google Tag Manager (GTM)</li>
+      </ul>
+    </div>
+    <div class="skill-column">
+      <h3>Intermediate Skills</h3>
+      <ul>
+        <li>Microsoft Excel & Google Sheets</li>
+        <li>Google Workspace</li>
+        <li>Asana & ClickUp</li>
+        <li>CRM Management (GoHighLevel, Zoho, HubSpot)</li>
+        <li>Email & Inbox Management</li>
+        <li>Calendar & Booking Coordination</li>
+        <li>Data Entry & Recordkeeping</li>
+        <li>Administrative Reporting</li>
+        <li>Meta Business Suite</li>
+        <li>Social Media Content Scheduling</li>
+        <li>Canva</li>
+        <li>Looker Studio</li>
+        <li>Amazon Ads, Meta Ads & TikTok Ads</li>
+        <li>Notion & Documentation Management</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:20px">
+    <h3>Relevant Skills for Administrative & Virtual Assistant Roles</h3>
+    <div class="tag-list">
+      <span class="tag">Executive & Administrative Support</span>
+      <span class="tag">Appointment Setting & Scheduling</span>
+      <span class="tag">Customer Service & Communication</span>
+      <span class="tag">Data Entry & Recordkeeping</span>
+      <span class="tag">Microsoft Excel & Google Sheets</span>
+      <span class="tag">Asana & Task Management</span>
+      <span class="tag">CRM Management</span>
+      <span class="tag">Social Media Management & Scheduling</span>
+      <span class="tag">Email Management</span>
+      <span class="tag">Administrative Reporting</span>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- EXPERIENCE DURATIONS -->
+<section id="roles">
+<div class="container">
+  <p class="eyebrow">Professional Experience Overview</p>
+  <h2>Preferred Roles & <span class="accent">Experience</span></h2>
+  <p class="section-intro">Combined whole-life experience durations as provided in my professional records.</p>
+  <div class="grid-3">
+    <div class="card"><h3>SEO Specialist</h3><p class="accent">1 YEAR AND 11 months</p><p class="muted small">Combined whole-life experience</p></div>
+    <div class="card"><h3>PPC / Paid Advertising Specialist</h3><p class="accent">3 YEARS</p><p class="muted small">Google, Microsoft, Amazon, Meta & TikTok Ads — combined whole-life experience</p></div>
+    <div class="card"><h3>Digital Marketing Virtual Assistant</h3><p class="accent">2 YEARS</p><p class="muted small">Combined whole-life experience</p></div>
+    <div class="card"><h3>Social Media Management & Content Creation</h3><p class="accent">4–5 YEARS</p><p class="muted small">Combined whole-life experience</p></div>
+    <div class="card"><h3>Administrative / Executive Virtual Assistant</h3><p class="accent">4 YEARS</p><p class="muted small">Combined whole-life experience</p></div>
+    <div class="card"><h3>Appointment Setter</h3><p class="accent">3 YEARS</p><p class="muted small">Combined whole-life experience</p></div>
+    <div class="card"><h3>Customer Service Representative</h3><p class="accent">4 YEARS</p><p class="muted small">Combined whole-life experience</p></div>
+    <div class="card"><h3>Records Retrieval Specialist</h3><p class="accent">7 MONTHS</p></div>
+    <div class="card"><h3>CRM Management</h3><p class="accent">2 YEARS</p><p class="muted small">Combined whole-life experience</p></div>
+  </div>
+</div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="credentials">
+<div class="container">
+  <p class="eyebrow">Education & Professional Development</p>
+  <h2>Certifications & <span class="accent">Training</span></h2>
+  <p class="section-intro">Professional qualifications, training subjects, and additional credentials.</p>
+
+  <div class="grid-2">
+    <div class="credential-card">
+      <h3>Google Analytics (GA4)</h3>
+      <p>Google Analytics certification.</p>
+    </div>
+    <div class="credential-card">
+      <h3>Google Ads Search</h3>
+      <p>Google Ads Search certification.</p>
+    </div>
+    <div class="credential-card">
+      <h3>Google Ads Shopping</h3>
+      <p>Google Ads Shopping certification.</p>
+    </div>
+    <div class="credential-card">
+      <h3>Google Tag Manager Fundamentals</h3>
+      <p>Google Tag Manager Fundamentals certification.</p>
+    </div>
+    <div class="credential-card">
+      <h3>EF SET English Certificate</h3>
+      <p>67/100 · C1 Advanced</p>
+      <p>Reading: 71 — C2 Proficient<br>Listening: 63 — C1 Advanced<br>Awarded: 16 November 2024</p>
+      <a class="credential-link" href="https://cert.efset.org/xztfKu" target="_blank" rel="noopener">Verify EF SET Certificate ↗</a>
+    </div>
+    <div class="credential-card">
+      <h3>Peak Outsourcing — Certificate of Achievements</h3>
+      <p>Records Retrieval Specialist · Peak Outsourcing, Dumaguete City · 2024</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:22px">
+    <h3>Outsourced Doers / Doneverse — MyTraining Program</h3>
+    <ul class="muted small" style="padding-left:19px;margin-top:12px">
+      <li>Digital Marketing Foundations</li>
+      <li>Virtual Assistant Foundations</li>
+      <li>Administration Support</li>
+      <li>Marketing Design</li>
+      <li>Marketing Funnels</li>
+      <li>Email Marketing</li>
+      <li>Social Media Management</li>
+    </ul>
+  </div>
+
+  <div class="card" style="margin-top:20px">
+    <h3>Education</h3>
+    <p class="muted small">Silliman University — Bachelor of Business Administration, Management · 2015–2018</p>
+  </div>
+</div>
+</section>
+
+<!-- RECOGNITION -->
+<section class="light-section" id="recognition">
+<div class="container">
+  <p class="eyebrow">Professional Recognition</p>
+  <h2>Recognition & <span class="accent">Achievements</span></h2>
+  <div class="grid-3">
+    <div class="card"><h3>Top Performer — April 2024</h3><p class="accent">99.81%</p><p class="muted small">Peak Outsourcing Dumaguete — overall performance score as a Records Retrieval Specialist.</p></div>
+    <div class="card"><h3>Top NPS — Q1 2018</h3><p class="accent">98.78%</p><p class="muted small">TeleTech — Net Promoter Score recognition while supporting the Weight Watchers / Humana account.</p></div>
+    <div class="card"><h3>Top IR — Q1 2018</h3><p class="accent">99.52%</p><p class="muted small">TeleTech — IR recognition score.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- COMMUNITY AND SPORTS -->
+<section id="community">
+<div class="container">
+  <p class="eyebrow">Additional Leadership & Service</p>
+  <h2>Sports Officiating & <span class="accent">Community</span></h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3>Sports Officiating</h3>
+      <p class="muted small">Served as technical official at 16 listed tournaments from 2022 to 2025, including Palarong Pambansa 2024, SCUAA 2023, RSCUAA 2025 and ISAC 2024. Officiated the Governor Gwen Garcia Unity Volleyball Cup (2022 and 2023), the Lapu-Lapu City and Mandaue City Mayor’s Cups (2025), and DERESA 2023.</p>
+      <p class="accent small"><strong>PNVF — Philippine National Volleyball Federation</strong></p>
+      <p class="muted small">National Referee Level III · 2021 – Present</p>
+    </div>
+    <div class="card">
+      <h3>Founder and Head Coach</h3>
+      <p class="accent small">Santander Volleyball Association (SAVA) · Established 2021</p>
+      <p class="muted small">Founded and leads a community volleyball association in Santander, Cebu, coaching teams for local leagues and open tournaments.</p>
+      <ul class="muted small" style="padding-left:18px">
+        <li>Coached Team SAVA at the Dumanjug Open Volleyball Tournament.</li>
+        <li>Coached the Southside Volleyball Team to three championships in the OLC Bato Fiesta League.</li>
+        <li>Served as conditioning coach for Santander’s men’s and women’s teams at the 11th GuvCup (2023), and coached Santander Cebu’s women’s team at the 2022 GuvCup.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- PROFESSIONAL LINKS -->
+<section class="light-section" id="resources">
+<div class="container">
+  <p class="eyebrow">Professional Resources</p>
+  <h2>My Professional <span class="accent">Links</span></h2>
+  <p class="section-intro">Recruiters and potential clients can use these links to learn more about my background, communication, and work readiness.</p>
+
+  <div class="resource-list">
+    <div class="resource"><strong>LinkedIn Profile</strong><a href="https://www.linkedin.com/in/clenguzarem" target="_blank" rel="noopener">linkedin.com/in/clenguzarem ↗</a></div>
+    <div class="resource"><strong>Facebook Page</strong><a href="https://www.facebook.com/clenguzarem.va" target="_blank" rel="noopener">facebook.com/clenguzarem.va ↗</a></div>
+    <div class="resource"><strong>Audio Self Introduction</strong><a href="https://vocaroo.com/1mnjTi3yLSS5" target="_blank" rel="noopener">Listen to my introduction ↗</a></div>
+    <div class="resource"><strong>Loom Video Introduction</strong><a href="https://www.loom.com/share/2fd40260e4514fc89ff20927639cbe4f" target="_blank" rel="noopener">Watch my video introduction ↗</a></div>
+    <div class="resource"><strong>Digital Growth & Operations Support CV</strong><a href="https://drive.google.com/file/d/1UtUtfMVFC2HlHOo2hrlTGD_l9rUlOjMQ/view?usp=sharing" target="_blank" rel="noopener">View my CV ↗</a></div>
+    <div class="resource"><strong>Speedtest & Computer Specifications</strong><a href="https://drive.google.com/drive/folders/1s5Rg1kPAitqjLdUNMIYu7OV1lGYkmVGN?usp=sharing" target="_blank" rel="noopener">View equipment and connectivity details ↗</a></div>
+  </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+<div class="container">
+  <p class="eyebrow">Professional Inquiries</p>
+  <h2>Let's Work <span class="accent">Together.</span></h2>
+  <p class="section-intro">For recruitment opportunities, digital marketing projects, or professional collaboration, feel free to contact me.</p>
+  <div class="btn-row" style="justify-content:center">
+    <a class="btn btn-primary" href="mailto:Clenthonguzarem29@gmail.com">Email Me</a>
+    <a class="btn btn-outline" href="https://wa.me/639368447153" target="_blank" rel="noopener">WhatsApp Me</a>
+    <a class="btn btn-outline" href="https://www.linkedin.com/in/clenguzarem" target="_blank" rel="noopener">Connect on LinkedIn</a>
+  </div>
+  <p class="muted small" style="margin-top:22px">Santander, Cebu, Philippines 6026</p>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container">
+  <p>© <span id="year"></span> Clen Guzarem. Digital Growth & Operations Support Specialist.</p>
+  <p>Built to showcase professional experience, capabilities, and selected work.</p>
+</div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
