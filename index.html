@@ -408,7 +408,10 @@ footer a{color:var(--gold)}
   <h2>Professional <span class="accent">Summary</span></h2>
   <p class="section-intro">Digital growth, performance marketing, e-commerce, and business operations.</p>
 
-  <div class="about-grid">
+  <div class="about-grid" style="display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,0.8fr);gap:35px;align-items:start;">
+
+  <div style="display:flex;flex-direction:column;gap:25px;">
+
     <div class="about-copy">
       <p>
         My professional background combines digital marketing, performance
@@ -455,16 +458,27 @@ footer a{color:var(--gold)}
       </p>
     </div>
 
-    <aside class="fact-list">
-      <div class="fact"><strong>Professional Title</strong><span>Digital Growth & Operations Support Specialist</span></div>
-      <div class="fact"><strong>Location</strong><span>Santander Cebu, Philippines 6026</span></div>
-      <div class="fact"><strong>Email</strong><span>Clenthonguzarem29@gmail.com</span></div>
-      <div class="fact"><strong>WhatsApp</strong><span>+63 936 8447 153</span></div>
-      <div class="fact"><strong>Education</strong><span>Bachelor of Business Administration, Management — Silliman University, 2015–2018</span></div>
-      <div class="fact"><strong>Languages</strong><span>English, Tagalog, Cebuano</span></div>
-    </aside>
+        </div>
+
+    <div style="position:relative;display:flex;justify-content:center;align-items:center;padding:25px 10px;">
+
+      <!-- BRAND FLOATING BACKGROUND -->
+      <div style="position:absolute;width:85%;height:85%;background:linear-gradient(135deg,#041727,#0B4770,#071A3A);border:1px solid #F28C28;border-radius:28px;transform:rotate(-7deg);box-shadow:0 20px 45px rgba(4,23,39,0.25);"></div>
+
+      <div style="position:absolute;width:75%;height:75%;border:2px solid #F5B335;border-radius:24px;transform:rotate(7deg);opacity:0.65;"></div>
+
+      <!-- PROFESSIONAL HEADSHOT -->
+      <img
+        src="assets/brand/clen-professional-headshot.png"
+        alt="Clen Guzarem - Digital Growth and Operations Support Specialist"
+        style="position:relative;z-index:2;width:100%;max-width:340px;height:auto;object-fit:cover;border-radius:22px;border:3px solid #FFFFFF;box-shadow:0 25px 50px rgba(4,23,39,0.35);"
+      />
+
+    </div>
+
   </div>
-</div>
+
+  <aside class="fact-list">
 </section>
 
 <!-- CAREER EXPERIENCE -->
