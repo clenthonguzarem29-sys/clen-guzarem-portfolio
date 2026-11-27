@@ -429,6 +429,75 @@ footer a{color:var(--gold)}
   position: relative;
   top: 0 !important;
 }
+  
+/* ADMINISTRATIVE & VIRTUAL ASSISTANT SKILLS BOARD */
+
+#skills .admin-skills-board {
+  margin-top: 35px;
+  background: transparent;
+  padding: 0;
+}
+
+#skills .admin-skills-inner {
+  background: #071A3A;
+  padding: 25px;
+  border-radius: 14px;
+  color: #FFFFFF;
+}
+
+#skills .admin-skills-title {
+  background: #FFFFFF;
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 17px 20px;
+  margin: 0 0 22px;
+  border-radius: 9px;
+  box-shadow: 0 4px 0 #CBD5E1;
+}
+
+#skills .admin-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+#skills .admin-skill-item {
+  background: #F28C28;
+  color: #071A3A;
+  padding: 15px 12px;
+  border-radius: 8px;
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  box-shadow: 0 4px 0 #B85D16;
+  transition: transform 0.2s ease;
+}
+
+#skills .admin-skill-item:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 900px) {
+  #skills .admin-skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  #skills .admin-skills-inner {
+    padding: 16px;
+  }
+
+  #skills .admin-skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 
