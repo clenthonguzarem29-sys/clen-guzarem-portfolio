@@ -498,6 +498,65 @@ footer a{color:var(--gold)}
     grid-template-columns: 1fr;
   }
 }
+  
+/* SEPARATE ADMINISTRATIVE SKILLS SECTION */
+
+#admin-skills .admin-skills-inner {
+  width: 100%;
+  box-sizing: border-box;
+  background: #0B2B52;
+  padding: 28px;
+  border-radius: 14px;
+}
+
+#admin-skills .admin-skills-title {
+  background: #FFFFFF;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 17px 20px;
+  margin: 0 0 22px;
+  border-radius: 9px;
+  box-shadow: 0 4px 0 #CBD5E1;
+}
+
+#admin-skills .admin-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+#admin-skills .admin-skill-item {
+  background: #F28C28;
+  color: #071A3A;
+  padding: 15px 12px;
+  border-radius: 8px;
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  box-shadow: 0 4px 0 #B85D16;
+}
+
+@media (max-width: 900px) {
+  #admin-skills .admin-skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  #admin-skills .admin-skills-inner {
+    padding: 16px;
+  }
+
+  #admin-skills .admin-skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 
@@ -1212,31 +1271,39 @@ footer a{color:var(--gold)}
       </ul>
     </div>
   </div>
+</section>
+    
+<!-- ADMINISTRATIVE & VIRTUAL ASSISTANT SKILLS -->
+<section class="light-section" id="admin-skills" style="color:#1B2433;">
+  <div class="container">
 
- 
-<div class="admin-skills-board">
-  <div class="admin-skills-inner">
+    <p class="eyebrow">Administrative & Virtual Assistance</p>
+    <h2>Administrative <span class="accent">Skills</span></h2>
 
-    <h3 class="admin-skills-title">
-      RELEVANT SKILLS FOR ADMINISTRATIVE & VIRTUAL ASSISTANT ROLES
-    </h3>
+    <div class="admin-skills-inner">
 
-    <div class="admin-skills-grid">
-      <div class="admin-skill-item">Executive & Administrative Support</div>
-      <div class="admin-skill-item">Appointment Setting & Scheduling</div>
-      <div class="admin-skill-item">Customer Service & Communication</div>
-      <div class="admin-skill-item">Data Entry & Recordkeeping</div>
-      <div class="admin-skill-item">Microsoft Excel & Google Sheets</div>
-      <div class="admin-skill-item">Asana & Task Management</div>
-      <div class="admin-skill-item">CRM Management</div>
-      <div class="admin-skill-item">Social Media Management & Scheduling</div>
-      <div class="admin-skill-item">Email Management</div>
-      <div class="admin-skill-item">Administrative Reporting</div>
+      <h3 class="admin-skills-title">
+        RELEVANT SKILLS FOR ADMINISTRATIVE & VIRTUAL ASSISTANT ROLES
+      </h3>
+
+      <div class="admin-skills-grid">
+        <div class="admin-skill-item">Executive & Administrative Support</div>
+        <div class="admin-skill-item">Appointment Setting & Scheduling</div>
+        <div class="admin-skill-item">Customer Service & Communication</div>
+        <div class="admin-skill-item">Data Entry & Recordkeeping</div>
+        <div class="admin-skill-item">Microsoft Excel & Google Sheets</div>
+        <div class="admin-skill-item">Asana & Task Management</div>
+        <div class="admin-skill-item">CRM Management</div>
+        <div class="admin-skill-item">Social Media Management & Scheduling</div>
+        <div class="admin-skill-item">Email Management</div>
+        <div class="admin-skill-item">Administrative Reporting</div>
+      </div>
+
     </div>
 
   </div>
-</div>
 </section>
+
 
 <!-- EXPERIENCE DURATIONS -->
 <section id="roles">
